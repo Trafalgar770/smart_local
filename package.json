@@ -1,0 +1,16 @@
+{
+  "name": "smart-local-service-fullstack",
+  "version": "1.0.0",
+  "description": "Smart Local Service AI (LocalHelp AI) - Unified Single-URL Full-Stack Application",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "start": "node server/dist/index.js",
+    "dev": "concurrently -n \"CLIENT_WATCH,SERVER\" -c \"cyan,blue\" \"npm --prefix client run build -- --watch\" \"npm --prefix server run dev\"",
+    "build": "npm --prefix client run build && npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

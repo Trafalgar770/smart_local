@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment & secret files
+.env
+.env*.local
+.env.development
+.env.production
+*.env
+client/.env
+server/.env
+!*.env.example
+
+# Build artifacts
+dist/
+*/dist/
+dist-ssr/
+build/
+out/
+
+# TypeScript cache
+*.tsbuildinfo
+.tsbuildinfo
+
+# Logs & temp
+logs/
+*.log
+tmp/
+temp/
+
+# IDE & OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
