@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Smart Local Service AI (LocalHelp AI) - Unified Single-URL Full-Stack Application",
   "main": "server/dist/index.js",
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "start": "node server/dist/index.js",
     "dev": "concurrently -n \"CLIENT_WATCH,SERVER\" -c \"cyan,blue\" \"npm --prefix client run build -- --watch\" \"npm --prefix server run dev\"",
