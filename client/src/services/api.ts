@@ -12,7 +12,8 @@ import {
   RequestStatus
 } from '../types';
 
-const API_BASE = '/api';
+export const API_BASE =
+  ((import.meta as any).env?.VITE_API_BASE_URL as string)?.replace(/\/$/, '') || '/api';
 
 function getAuthHeaders(): HeadersInit {
   const token = localStorage.getItem('sls_token');

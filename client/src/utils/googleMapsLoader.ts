@@ -127,13 +127,15 @@ export const GOOGLE_MAPS_DARK_STYLE: any[] = [
   },
 ];
 
+import { API_BASE } from '../services/api';
+
 /**
  * Fetch effective API key from environment or server config endpoint.
  */
 export async function getEffectiveApiKey(): Promise<string> {
   if (GOOGLE_MAPS_API_KEY) return GOOGLE_MAPS_API_KEY;
   try {
-    const res = await fetch('/api/config/maps');
+    const res = await fetch(`${API_BASE}/config/maps`);
     if (res.ok) {
       const data = await res.json();
       if (data?.apiKey) return data.apiKey;
